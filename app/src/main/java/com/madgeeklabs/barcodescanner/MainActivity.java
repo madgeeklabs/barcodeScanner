@@ -63,7 +63,6 @@ public class MainActivity extends Activity implements Callback<Response> {
                 // Handle cancel
             }
         }
-
     }
 
     @Override
@@ -84,7 +83,6 @@ public class MainActivity extends Activity implements Callback<Response> {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -95,6 +93,6 @@ public class MainActivity extends Activity implements Callback<Response> {
 
     @Override
     public void failure(RetrofitError error) {
-
+        Log.d(TAG, "" + error.getMessage());
     }
 }
